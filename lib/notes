@@ -1,0 +1,29 @@
+# For this project I am going to build a Command Line Interface application that takes in the users mood 
+based off the array of moods I build in which is their main menu and my program will give them a playlist reccommendation based on their mood 
+
+
+#Things this application must do == Welcome the user
+#ask for their mood based on given options
+#resturn a list of atleast 10 songs based on the mood they choose
+#possibly show the artist of the songs as well
+
+
+#proposed classes 
+#CLI class - basically the application , this is respondsible for everything the user will see on their screen
+# API Class - where the data lives , basically this is the place that gives us the info or specific playlist based on the mood the user chooses
+# moods class - holds the choices of mood or the main menu
+
+
+#important things to remember 
+# the mood has many songs , the songs belong to the mood yet the mood is associated  with the artist or even the user
+
+#to run the app == bin/run.rb
+
+#Biggest challenges will be 
+#1 figuring out which API to users
+#2 figuring out how to connect an API - lol thank God there are videos out there
+#3 figuring out how to get the exact information needed from the API
+#4 figuring out how to diplay the moods and how to handle  bad input 
+#5 making sure that I know enough to pass the review and be ble to possibly refractor my code if need be 
+
+
