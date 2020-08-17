@@ -1,4 +1,9 @@
-class Moods  
+class Moods
+
+  def moods 
+  @@moods =["Happy", "Sad", "Angry", "Celebratory","Romantic" , "good"] 
+  end 
+
   @@all= []
 
   attr_accessor :mood 
@@ -13,6 +18,3 @@ class Moods
   end 
 end 
 
-def moods 
-  moods = ["Happy", "Sad", "Angry", "Celebratory","Romantic" , "good"] 
-end 

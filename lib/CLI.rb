@@ -10,15 +10,15 @@ class CLI
 
         def Yes
           if "Yes"  then puts "Please enter your current mood" 
-           puts mood 
+            puts moods
+            input = gets.strip
+          end 
+        end 
 
-         elsif puts "please choose on of the following moods" 
-             input = gets.strip
-         end      
-
-    
-end 
-  end
-end 
+      elsif puts "please choose one of the following moods" 
+             
+         end     
+      end
 
 #closing message - "Thank you so much  for choosing the Music Therapy App , I hope we were able to  help you today"
+

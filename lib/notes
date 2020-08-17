@@ -4,7 +4,7 @@ based off the array of moods I build in which is their main menu and my program 
 
 #Things this application must do == Welcome the user
 #ask for their mood based on given options
-#resturn a list of atleast 10 songs based on the mood they choose
+#return a list of atleast 10 songs based on the mood they choose
 #possibly show the artist of the songs as well
 
 

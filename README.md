@@ -1,8 +1,15 @@
 # Musictherapy
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/musictherapy`. To experiment with that code, run `bin/console` for an interactive prompt.
+For this project I am going to built a Command Line Interface application that takes in the users mood and based off their mood which is picked from their main menu of moods. My program will give them a playlist reccommendation based on their mood. Then if the user wants more info about the song they can select the song and my program will tell them the artist and or genre.
 
-TODO: Delete this and the text above, and describe your gem
+Things this application must do == 
+#Welcome the user
+#ask for their mood based on given options
+#return a list of atleast 10 songs based on the mood they choose
+#show the artist of the songs as well as the genre 
+
+
+
 
 ## Installation
 
