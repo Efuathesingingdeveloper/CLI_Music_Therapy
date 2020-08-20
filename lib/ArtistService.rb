@@ -1,11 +1,16 @@
+#create if statments for each artist 
+#if or case stament input == "130"
+# puts key=  "e22f5dca4amsha68af6c6779b92ap1cc5d3jsn94b62bcdbe71"
+   # url=  "genius.p.rapidapi.com"
+    #response = Unirest.get "https://genius.p.rapidapi.com/artists/130/songs",
+   #headers:{
+   #"X-RapidAPI-Host" => "genius.p.rapidapi.com",
+   #"X-RapidAPI-Key" => "e22f5dca4amsha68af6c6779b92ap1cc5d3jsn94b62bcdbe71"
+ #  }
+#prints artist hash 
 class Artists
-  #attr_accessor :artistsname, :spotifyid
-
-  #def initialize(artistname, spotifyid)
-  #end
-  @@artists = { "efua" => "3bjAdDLHWwdkMsBBNaxXx6", "adele" => "4dpARuHxo51G3z768sgnrY", "beyonce" => "6vWDO969PvNqNYHIOW5v0m"}
- # @@artists = { "efua" => "3bjAdDLHWwdkMsBBNaxXx6", "adele" => "4dpARuHxo51G3z768sgnrY", "beyonce" => "6vWDO969PvNqNYHIOW5v0m", "aliciakeys” => "3DiDSECUqqY1AuBP8qtaIa", "whitneyhouston" => "6XpaIBNiVzIetEPCWDvAFP" }
-
+  @@artists = { "1.Drake" => "130", "2.Adele" => "2300", "3.Beyonce" => "498","4.JustinBieber" => "357", "5.ArianaGrande" => "26507", "6.BillieEillish" => "73120", "7.ShawnMendes" => "195029", "8.WhitneyHouston" => "8534", "9.OneDirection" => "19657", "10.MichealJackson" => "835"}
+  
   def printArtists()
     for artist in @@artists 
       puts artist
@@ -13,6 +18,7 @@ class Artists
   end 
 end 
 
+#tells the user what to do and gets input
 class UserService
 
   def Service
@@ -23,6 +29,7 @@ class UserService
     elsif input == "yes"  then puts  "Please enter which artist you would like to see the top 5 releases of based on the list below : "
       Artists.new.printArtists
         input = gets.strip
+        API.get_artistsreleases(input)
 
     else puts "Error, incorrect Artist choice, please choose one of the following Artists : " 
       Artits.new.printArtists

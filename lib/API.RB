@@ -1,26 +1,135 @@
-#require_relative "./lib/Artistservice"
-# require "rest-client"
-# require "json"
-#require 'pry'
-#class API
-# 
-#“Efua” => “3bjAdDLHWwdkMsBBNaxXx6”,  
-#   curl -X "GET" "https://api.spotify.com/v1/artists/3bjAdDLHWwdkMsBBNaxXx6/albums?include_groups=single&market=ES&limit=5&offset=0" -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer BQAv0pDc_-K4I01-dqMtzskn0TdzSZHsuu21AAyDnwJbrxlbvBOsehvGjVtOftJ9w48a1XUq4Viq5TSBjZ8Jc5LLhA7iakCt-BCnpt6aGXCrFwVQWNaWObNAqTLOE7e1QgPeNwzueQ"
+#require "./lib/Artistservice"
+require 'unirest'
+#require "json"
+require 'pry'
+class API
 
-#“Adele” => “4dpARuHxo51G3z768sgnrY”, 
-#curl -X "GET" "https://api.spotify.com/v1/artists/4dpARuHxo51G3z768sgnrY/albums?include_groups=single&market=ES&limit=5&offset=0" -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer BQAv0pDc_-K4I01-dqMtzskn0TdzSZHsuu21AAyDnwJbrxlbvBOsehvGjVtOftJ9w48a1XUq4Viq5TSBjZ8Jc5LLhA7iakCt-BCnpt6aGXCrFwVQWNaWObNAqTLOE7e1QgPeNwzueQ"
+ #get any artist songs method
+    def self.get_artistsreleases(artist)
+        key=  "e22f5dca4amsha68af6c6779b92ap1cc5d3jsn94b62bcdbe71"
+        url=  "genius.p.rapidapi.com"
+        response = Unirest.get "https://genius.p.rapidapi.com/artists/songs",
+  headers:{
+    "X-RapidAPI-Host" => "genius.p.rapidapi.com",
+    "X-RapidAPI-Key" => "e22f5dca4amsha68af6c6779b92ap1cc5d3jsn94b62bcdbe71"
+  }
+        binding.pry
+        
+  
+    end
+end
+
+#drake method
+def self.get_artistsreleases(artist)
+    key=  "e22f5dca4amsha68af6c6779b92ap1cc5d3jsn94b62bcdbe71"
+    url=  "genius.p.rapidapi.com"
+ response = Unirest.get "https://genius.p.rapidapi.com/artists/130/songs",
+headers:{
+"X-RapidAPI-Host" => "genius.p.rapidapi.com",
+"X-RapidAPI-Key" => "e22f5dca4amsha68af6c6779b92ap1cc5d3jsn94b62bcdbe71"
+}
+end
+
+# Adele method
+
+def self.get_artistsreleases(artist)
+    key=  "e22f5dca4amsha68af6c6779b92ap1cc5d3jsn94b62bcdbe71"
+    url=  "genius.p.rapidapi.com"
+ response = Unirest.get "https://genius.p.rapidapi.com/artists/2300/songs",
+headers:{
+"X-RapidAPI-Host" => "genius.p.rapidapi.com",
+"X-RapidAPI-Key" => "e22f5dca4amsha68af6c6779b92ap1cc5d3jsn94b62bcdbe71"
+}
+end
+
+#beyonce method
+def self.get_artistsreleases(artist)
+    key=  "e22f5dca4amsha68af6c6779b92ap1cc5d3jsn94b62bcdbe71"
+    url=  "genius.p.rapidapi.com"
+ response = Unirest.get "https://genius.p.rapidapi.com/artists/498/songs",
+headers:{
+"X-RapidAPI-Host" => "genius.p.rapidapi.com",
+"X-RapidAPI-Key" => "e22f5dca4amsha68af6c6779b92ap1cc5d3jsn94b62bcdbe71"
+}
+end
 
 
-#“Beyonce” => "6vWDO969PvNqNYHIOW5v0m” ,
-#https://api.spotify.com/v1/artists/6vWDO969PvNqNYHIOW5v0m/albums?include_groups=single&market=ES&limit=5&offset=0
+#Justinbieber method
+def self.get_artistsreleases(artist)
+    key=  "e22f5dca4amsha68af6c6779b92ap1cc5d3jsn94b62bcdbe71"
+    url=  "genius.p.rapidapi.com"
+ response = Unirest.get "https://genius.p.rapidapi.com/artists/357/songs",
+headers:{
+"X-RapidAPI-Host" => "genius.p.rapidapi.com",
+"X-RapidAPI-Key" => "e22f5dca4amsha68af6c6779b92ap1cc5d3jsn94b62bcdbe71"
+}
+end
 
-#“Alicia Keys” => “3DiDSECUqqY1AuBP8qtaIa” , 
-# curl -X "GET" "https://api.spotify.com/v1/artists/3DiDSECUqqY1AuBP8qtaIa/albums?include_groups=single&market=ES&limit=5&offset=0" -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer BQAv0pDc_-K4I01-dqMtzskn0TdzSZHsuu21AAyDnwJbrxlbvBOsehvGjVtOftJ9w48a1XUq4Viq5TSBjZ8Jc5LLhA7iakCt-BCnpt6aGXCrFwVQWNaWObNAqTLOE7e1QgPeNwzueQ"
+# Ariana Grande method
+def self.get_artistsreleases(artist)
+    key=  "e22f5dca4amsha68af6c6779b92ap1cc5d3jsn94b62bcdbe71"
+    url=  "genius.p.rapidapi.com"
+ response = Unirest.get "https://genius.p.rapidapi.com/artists/26507/songs",
+headers:{
+"X-RapidAPI-Host" => "genius.p.rapidapi.com",
+"X-RapidAPI-Key" => "e22f5dca4amsha68af6c6779b92ap1cc5d3jsn94b62bcdbe71"
+}
+end
 
-#“Whitney Houston” => “ 6XpaIBNiVzIetEPCWDvAFP” 
-#curl -X "GET" "https://api.spotify.com/v1/artists/6XpaIBNiVzIetEPCWDvAFP/albums?include_groups=single&market=ES&limit=5&offset=0" -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer BQAv0pDc_-K4I01-dqMtzskn0TdzSZHsuu21AAyDnwJbrxlbvBOsehvGjVtOftJ9w48a1XUq4Viq5TSBjZ8Jc5LLhA7iakCt-BCnpt6aGXCrFwVQWNaWObNAqTLOE7e1QgPeNwzueQ"
-#
-#end 
-#Artist_hash = JSON.parse{resp.body, symbolize_names:true}
-#response = RestClient.get 'https://api.spotify.com/v1/artists/3bjAdDLHWwdkMsBBNaxXx6/albums?include_groups=single&market=ES&limit=5&offset=0" -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer BQBNEr6gFsX2559ebhjGpBLOFrBIzLRggWo1BWa4HpAQhzZs-axZRYjvnLhz2jYYwWyle9M1aEYN-PUuLjxKQ9PH
-#binding.pry
+
+#billie eillish method
+def self.get_artistsreleases(artist)
+    key=  "e22f5dca4amsha68af6c6779b92ap1cc5d3jsn94b62bcdbe71"
+    url=  "genius.p.rapidapi.com"
+ response = Unirest.get "https://genius.p.rapidapi.com/artists/73120/songs",
+headers:{
+"X-RapidAPI-Host" => "genius.p.rapidapi.com",
+"X-RapidAPI-Key" => "e22f5dca4amsha68af6c6779b92ap1cc5d3jsn94b62bcdbe71"
+}
+end
+
+#shawn mendes method
+def self.get_artistsreleases(artist)
+    key=  "e22f5dca4amsha68af6c6779b92ap1cc5d3jsn94b62bcdbe71"
+    url=  "genius.p.rapidapi.com"
+ response = Unirest.get "https://genius.p.rapidapi.com/artists/195029/songs",
+headers:{
+"X-RapidAPI-Host" => "genius.p.rapidapi.com",
+"X-RapidAPI-Key" => "e22f5dca4amsha68af6c6779b92ap1cc5d3jsn94b62bcdbe71"
+}
+end
+
+#whitney houston method
+def self.get_artistsreleases(artist)
+    key=  "e22f5dca4amsha68af6c6779b92ap1cc5d3jsn94b62bcdbe71"
+    url=  "genius.p.rapidapi.com"
+ response = Unirest.get "https://genius.p.rapidapi.com/artists/8534/songs",
+headers:{
+"X-RapidAPI-Host" => "genius.p.rapidapi.com",
+"X-RapidAPI-Key" => "e22f5dca4amsha68af6c6779b92ap1cc5d3jsn94b62bcdbe71"
+}
+end
+
+
+#one direction method 
+def self.get_artistsreleases(artist)
+    key=  "e22f5dca4amsha68af6c6779b92ap1cc5d3jsn94b62bcdbe71"
+    url=  "genius.p.rapidapi.com"
+ response = Unirest.get "https://genius.p.rapidapi.com/artists/19657/songs",
+headers:{
+"X-RapidAPI-Host" => "genius.p.rapidapi.com",
+"X-RapidAPI-Key" => "e22f5dca4amsha68af6c6779b92ap1cc5d3jsn94b62bcdbe71"
+}
+end
+
+#micheal jackson method 
+def self.get_artistsreleases(artist)
+    key=  "e22f5dca4amsha68af6c6779b92ap1cc5d3jsn94b62bcdbe71"
+    url=  "genius.p.rapidapi.com"
+ response = Unirest.get "https://genius.p.rapidapi.com/artists/835/songs",
+headers:{
+"X-RapidAPI-Host" => "genius.p.rapidapi.com",
+"X-RapidAPI-Key" => "e22f5dca4amsha68af6c6779b92ap1cc5d3jsn94b62bcdbe71"
+}
+end
+
