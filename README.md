@@ -1,6 +1,6 @@
 # MusicalBrain
 
-For this project I am going to built a Command Line Interface application based on the Genius API. The app  ask the user if they would like to use my app , then they can type in any artist and get a list of the songs by that artist then they can pick a song from the list and get the lyrics for that song in their browser! 
+For this project I built a Command Line Interface application based on the Genius API. The app  ask the user if they would like to use my app , then they can type in any artist and get a list of the songs by that artist then they can pick a song from the list and get the lyrics for that song in their browser! 
 
 Things this application must do == 
 #Welcome the user

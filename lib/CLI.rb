@@ -12,7 +12,7 @@ class CLI
           puts " I hope you find some music you like better , have a great day"
 
         when "yes"  
-          puts " Please enter which artist you would like to see the releases of here are some suggestions : "
+          puts " Please enter which artist you would like to see the releases of here are some suggestions but you can choose ANY ARTIST "
           Artists.new.printArtists
             input = gets.strip
             primary_artist_id = SearchApi.getAnyartistid(input)
@@ -22,15 +22,7 @@ class CLI
           getLyrics (songs)
           closeProgram
         else  puts "please enter 'yes' or 'no' !"
-          puts " Please enter which artist you would like to see the releases of here are some suggestions : "
-          Artists.new.printArtists
-            input = gets.strip
-            primary_artist_id = SearchApi.getAnyartistid(input)
-            puts primary_artist_id
-          songs = API.get_artistsreleases(primary_artist_id)
-         formatInfo (songs)
-         getLyrics (songs)
-         closeProgram
+          start
           
       end
     end  
