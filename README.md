@@ -1,12 +1,11 @@
-# Musictherapy
+# MusicalBrain
 
-For this project I am going to built a Command Line Interface application that takes in the users mood and based off their mood which is picked from their main menu of moods. My program will give them a playlist reccommendation based on their mood. Then if the user wants more info about the song they can select the song and my program will tell them the artist and or genre.
+For this project I am going to built a Command Line Interface application based on the Genius API. The app  ask the user if they would like to use my app , then they can type in any artist and get a list of the songs by that artist then they can pick a song from the list and get the lyrics for that song in their browser! 
 
 Things this application must do == 
 #Welcome the user
-#ask for their mood based on given options
-#return a list of atleast 10 songs based on the mood they choose
-#show the artist of the songs as well as the genre 
+#ask if they want to use my app, ask for an artist, gives them suggestions
+#returns a list of artist songs then the lyrics
 
 
 
@@ -16,7 +15,7 @@ Things this application must do ==
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'musictherapy'
+gem 'musical brain'
 ```
 
 And then execute:
