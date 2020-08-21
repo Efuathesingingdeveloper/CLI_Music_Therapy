@@ -1,1 +1,0 @@
-# user can select certain artists based on the Id and get the year of the release date and type
