@@ -1,12 +1,11 @@
 
 require 'unirest'
-require "json"
-require 'pry'
+
 
 class API
 
    
-    def self.get_artistsreleases(num)
+    def self.get_artists_releases(num)
 
      songs = Unirest.get "https://genius.p.rapidapi.com/artists/#{num}/songs",
     headers:{
@@ -15,8 +14,9 @@ class API
     }
     
      songs_arr = songs.body["response"]["songs"]
-    
-     return songs_arr
+    # song.new(title, artist_id)
+    songs_arr.each do {|song|Song.new(full_title,num)}
+   
     end 
  end
 

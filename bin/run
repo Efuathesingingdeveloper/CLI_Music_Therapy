@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 
-require "./lib/main"
+require_relative "../lib/main"
 
 
 CLI.new.start

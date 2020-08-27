@@ -1,5 +1,6 @@
-class SearchApi
-     def self.getAnyartistid(input)
+
+class Search_api
+ def self.getAnyartistid(input)
    
  search = Unirest.get "https://genius.p.rapidapi.com/search?q=#{input}",
  headers:{
@@ -9,9 +10,11 @@ class SearchApi
    }
 
    primary_artist = search.body["response"]["hits"][0]["result"]["primary_artist"]["id"]
+ 
+   Artist.new(search.body["response"]["hits"][0]["result"]["primary_artist"]["name"])
    
   return primary_artist
   
   
-end 
+  end 
 end 

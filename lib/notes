@@ -1,0 +1,29 @@
+# class Artists
+# attr_accessor :Primary_artist, :url, :full_title , :songs 
+# @@all = ["1.Drake", "2.Adele" , "3.Beyonce"  ,"4.Justin Bieber" , "5.Ariana Grande" , "6.Billie Eillish" , "7.Shawn Mendes" , "8.Whitney Houston" , "9.One Direction" , "10.Micheal Jackson" ]
+
+#     def initialize(songs_arr)
+#       @@artist = artist
+#         self.id = songs_arr[:Primary_artist]
+#         self.url = songs_arr[:url]
+#         self.songs = songs_arr[:full_title]
+      
+#         @@all << self
+#     end
+
+#     def self.all
+#         @@all
+#     end
+
+# end
+
+implicit return = not explicitley returned
+.each = You always associate the each iterator with a block. It returns each value of the array, one by one, to the block
+.all = @@all, that will store every instance of the Song class
+8:52
+.all-stores or holds all the instances of that class
+.sort = re arrange the contents on an array  by sorting them for strings meaning alphabetically for numbers meaning from the smallest to highest value
+.map = Applying map on an array returns a new array where each element is the result of evaluating the block with the element as an argument.
+.find =  iterates through an array and gives you the first match for which the expression within a block returns true.
+.collect = The collect method returns the entire collection, regardless of whether it is an array or a hash.
+.include = will check if the varible is in the array 

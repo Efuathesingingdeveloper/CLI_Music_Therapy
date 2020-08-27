@@ -1,7 +1,5 @@
-require "./lib/Artistservice"
-require "./lib/CLI"
-require "./lib/API"
-require "./lib/SearchApi"
-
-#require "pry"
-#require "rest"
+require_relative "./artist_service"
+require_relative "./cli"
+require_relative "./api"
+require_relative "./search_api"
+require_relative "./song"
