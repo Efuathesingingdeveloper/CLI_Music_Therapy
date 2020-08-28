@@ -1,6 +1,6 @@
-require "pry"
-class Search_api
- def self.getAnyartistid(input)
+ require "pry"
+class SearchApi
+ def self.get_any_artist_id(input)
   
  response = Unirest.get "https://genius.p.rapidapi.com/search?q=#{input}",
   headers:{
@@ -9,31 +9,38 @@ class Search_api
     
   }
   
-  response.body["response"]["hits"].each do |a|
-  id = a["result"]["primary_artist"]["id"]
-url = a["result"]["primary_artist"]["url"]
-Artist.new(id, url)
+  
+  
+  
+if response.body["response"]["hits"] != []
+  id = response.body["response"]["hits"][0]["result"]["primary_artist"]["id"]
+  url = response.body["response"]["hits"][0]["result"]["primary_artist"]["url"]
 
-puts "Here's the genius id for your chosen artist"
-  puts id
-  puts "would you like to find their genius page ?"
-  input = gets.strip.downcase
+  # response.body["response"]["hits"].each do |a|
+  #   id = a["result"]["primary_artist"]["id"]
+  #   url = a["result"]["primary_artist"]["url"] 
+  # end
+  Artist.new(id, url)
+else 
+  id = nil 
+end
+  # response.body["response"]["hits"][0]["result"]["primary_artist"]["id"]
+  # id = response.body["response"]["hits"][0]["result"]["primary_artist"]["id"]
+  # url = response.body["response"]["hits"][0]["result"]["primary_artist"]["url"]
+
+
+  # binding.pry
+  #     if id  == nil
+  #       puts "please choose a valid artist ! "
+  #       input = gets.strip
+  #      CLI.start
+  # else
+  # end 
+
   
-  if input == "yes"
-   puts url
-   CLI.closeProgram
-  
-  elsif input == "no"
-   puts "have a great day"
- exit
-  else 
-    puts "please type 'yes' or 'no'"
-    input = gets.strip
-  end
-  
-  
-   end
-  end
+
+
+end
 end
  
 

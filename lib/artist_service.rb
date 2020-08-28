@@ -20,7 +20,7 @@
   
   @@artists =  ["Drake", "Adele" , "Beyonce"  ,"Justin Bieber" , "Ariana Grande" , "Billie Eillish" , "Shawn Mendes" , "Whitney Houston" , "One Direction" , "Micheal Jackson" ]
   
-  def self.printArtists()
+  def self.print_artists()
     for artist in @@artists 
       puts artist
     end
